@@ -1,0 +1,36 @@
+
+    // 1.1 Parašyti komandą kuri gražins automobilius, kurie turi parametrą "Miles_per_Gallon" ;
+    // 1.2. Parašyti komandą kuri gražins automobilius, kurie neturi "Miles_per_Gallon" ;
+    // 1.3  Parašyti komandą kuri gražins automobilius, kurie turi parametrą 8 "Cylinders" ir "Miles_per_Gallon" parametras didesnis arba lygus 15.
+    // 1.4  Parašyti komandą kuri gražins automobilius su pridėtu papildomu laiku ojekte, kuris vadinasi "Kilowatts", kuris yra lygus "Horsepower" * 0.7457;
+    // 1.5  Parašyti komandą kuri gražins automobilius išrikiuotus pagal "Weight_in_lbs" didėjančia tvarka.
+    // 1.6 Parašyti komandą kuri gražins true arba false reikšmę tikrinant ar visi automobiliai yra pagaminti "USA".
+
+    // 1.1
+    console.log(cars.filter(cars => cars.Miles_per_Gallon))
+
+    // 1.2
+  
+
+
+    // 1.3
+    console.log(cars.filter((cars) => {
+      return cars.Cylinders === 8 && cars.Miles_per_Gallon >= 15;
+    }))
+
+    // 1.4
+
+    // 1.5
+    const fn = (cars) => cars.sort((a, b) => a.Weight_in_lbs > b.Weight_in_lbs ? 1 : -1);
+    console.log(fn(cars))
+
+    // 1.6
+    console.log(cars.some((cars) => {
+  return cars.origin === "USA";
+}))
+
+
+  </script>
+</body>
+
+</html>
